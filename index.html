@@ -672,8 +672,8 @@
 
         .service-detail-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-            gap: 40px;
+            grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+            gap: 36px;
             align-items: start;
         }
 
@@ -733,22 +733,24 @@
         .service-features {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0 24px;
+            grid-template-columns: 1fr;
+            gap: 0;
         }
 
         .service-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 0.9375rem;
+            display: block;
+            font-size: 1rem;
+            line-height: 1.65;
             color: var(--gray-600);
-            padding: 10px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--gray-100);
         }
 
-        .service-features li:nth-last-child(-n + 2) {
-            border-bottom: none;
+        .service-features li:last-child { border-bottom: none; }
+
+        .service-features li strong {
+            color: var(--navy);
+            font-weight: 700;
         }
 
         .service-features li::before {
@@ -757,8 +759,9 @@
             height: 6px;
             background: var(--coral);
             border-radius: 50%;
-            flex-shrink: 0;
-            margin-top: 8px;
+            display: inline-block;
+            margin-right: 12px;
+            transform: translateY(-1px);
         }
 
         .service-proof {
@@ -828,7 +831,8 @@
         }
 
         .service-aside li {
-            font-size: 0.9375rem;
+            font-size: 0.98rem;
+            line-height: 1.6;
             color: var(--gray-600);
             padding-left: 16px;
             position: relative;
@@ -1363,10 +1367,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .service-features li:nth-last-child(-n + 2) {
-                border-bottom: 1px solid var(--gray-100);
-            }
-
             .service-features li:last-child {
                 border-bottom: none;
             }
@@ -1779,7 +1779,7 @@
                     </div>
                 </article>
 
-                <article class="service-detail analysis reverse animate-on-scroll" id="operations-support">
+                <article class="service-detail analysis animate-on-scroll" id="operations-support">
                     <div class="service-detail-grid">
                         <div class="service-detail-content">
                             <span class="service-kicker">04-07 / Operations & Business Support</span>
