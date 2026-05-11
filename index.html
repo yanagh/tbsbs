@@ -1133,6 +1133,9 @@
         .contact-item-icon {
             width: 48px;
             height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            flex-shrink: 0;
             background: var(--white);
             border-radius: 12px;
             display: flex;
@@ -1403,11 +1406,12 @@
             }
 
             .hero {
-                padding-bottom: 120px;
+                min-height: auto;
+                padding-bottom: 40px;
             }
 
             .hero::after {
-                height: 220px;
+                height: 90px;
             }
 
             .nav-links {
@@ -1447,6 +1451,7 @@
 
             .hero-content {
                 text-align: center;
+                padding-bottom: 20px;
             }
 
             .hero-description {
@@ -1462,6 +1467,8 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 gap: 24px;
+                margin-top: 44px;
+                padding-top: 24px;
             }
 
             .hero-stat {
@@ -1563,6 +1570,19 @@
                 font-size: 0.9375rem;
             }
 
+            .hero {
+                padding-bottom: 24px;
+            }
+
+            .hero::after {
+                height: 56px;
+            }
+
+            .hero-content {
+                padding-top: 64px;
+                padding-bottom: 12px;
+            }
+
             .service-detail,
             .testimonial-card,
             .contact-form-wrapper {
@@ -1580,6 +1600,22 @@
 
             .service-proof-item strong {
                 font-size: 0.9rem;
+            }
+
+            .contact-item {
+                gap: 12px;
+            }
+
+            .contact-item-icon {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .contact-item-icon svg {
+                width: 22px;
+                height: 22px;
             }
         }
     </style>
